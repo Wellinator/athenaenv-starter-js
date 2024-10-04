@@ -1,0 +1,22 @@
+{
+  "name": "athenaenv-starter-js",
+  "version": "1.0",
+  "description": "Starter template with JavaScript and auto-reload for AthenaEnv",
+  "main": "main.js",
+  "scripts": {
+    "build": "babel src -d dist --copy-files --no-comments",
+    "run-pcsx2": "powershell.exe -noprofile -ExecutionPolicy Bypass -NoExit -File \"run.ps1\" -NoNewWindow",
+    "build-and-run": "npm run build & npm run run-pcsx2",
+    "start": "nodemon --exec \"npm run build-and-run\"",
+    "watch": "nodemon --exec \"npm run build\""
+  },
+  "author": "Wellinator",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.25.6",
+    "@babel/core": "^7.25.2",
+    "@babel/preset-env": "^7.25.4",
+    "babel-preset-minify": "^0.5.2",
+    "nodemon": "^3.1.7"
+  }
+}
